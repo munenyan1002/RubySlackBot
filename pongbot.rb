@@ -1,8 +1,8 @@
 require 'slack-ruby-bot'
 
 class PongBot < SlackRubyBot::Bot
-  command 'ping' do |client,data, match|
-    client.say(text: 'pong', channel: data.channel)
+  command 'サイコロ' do |client,data, match|
+    client.say(text: rand(1..6), channel: data.channel)
   end
 end
 
